@@ -2,6 +2,9 @@ import sys
 import asyncio
 from src.dirsearch.requests import async_requests
 
+NAME = "Dirsearch"
+VERSION = "v1.0.0"
+
 """
 The Class of the Dirsearch
 """
