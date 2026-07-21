@@ -20,7 +20,12 @@ def getByRequests(
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}
-    return request.get(url = uri, headers = headers, params = params, data = data)
+    return request.get(
+        url=uri,
+        headers=headers,
+        params=params,
+        data=data
+    )
 
 """
 Sync Post By Request
@@ -37,7 +42,12 @@ def postByRequests(
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}
-    return request.post(url = uri, headers = headers, params = params, data = data)
+    return request.post(
+        url=uri,
+        headers=headers,
+        params=params,
+        data=data
+    )
 
 """
 Sync Get By Session
@@ -54,7 +64,12 @@ def getBySession(
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}
-    return session.get(url = uri, headers = headers, params = params, data = data)
+    return session.get(
+        url=uri,
+        headers=headers,
+        params=params,
+        data=data
+    )
 
 """
 Sync Post By Session
@@ -71,4 +86,9 @@ def postBySession(
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}
-    return session.post(url = uri, headers = headers, params = params, data = data)
+    return session.post(
+        url=uri,
+        headers=headers,
+        params=params,
+        data=data
+    )
