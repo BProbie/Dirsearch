@@ -1,5 +1,0 @@
-yarl~=1.24.2
-argparse~=1.4.0
-aiohttp~=3.14.1
-requests~=2.34.2
-fake-useragent~=2.2.0
