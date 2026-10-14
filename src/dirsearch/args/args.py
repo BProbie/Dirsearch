@@ -25,6 +25,9 @@ class Args:
 
         args = self.argumentParser.parse_args()
 
-        args.dictionary = [Path(dictionary).resolve() for dictionary in args.dictionary] if args.dictionary is not None else args.dictionary = [str(Path("./dictionary/default").resolve())]
+        if args.dictionary is not None:
+            args.dictionary = [Path(dictionary).resolve() for dictionary in args.dictionary]
+        else:
+            args.dictionary = [str(Path("./dictionary/default").resolve())]
 
         return args
