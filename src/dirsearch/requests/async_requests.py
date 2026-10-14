@@ -1,6 +1,6 @@
 import aiohttp
 import fake_useragent
-from aiohttp import ClientTimeout, ClientError, ClientResponse
+from aiohttp import ClientError, ClientResponse, ClientTimeout
 
 """
 Async Get By Session
@@ -17,7 +17,7 @@ async def async_get(
         uri: str,
         params: dict,
         data: dict,
-        headers: dict = None,
+        headers: dict | None = None,
         session: aiohttp.ClientSession = None,
         timeout: int = 60,
         attempts: int = 10
@@ -76,7 +76,7 @@ async def async_post(
         uri: str,
         params: dict,
         data: dict,
-        headers: dict = None,
+        headers: dict | None = None,
         session: aiohttp.ClientSession = None,
         timeout: int = 60,
         attempts: int = 10

@@ -1,5 +1,5 @@
-import requests
 import fake_useragent
+import requests
 from requests import Response
 
 request = requests
@@ -15,8 +15,8 @@ Sync Get By Request
 """
 def getByRequests(
         uri: str,
-        params: dict = None,
-        data: dict = None,
+        params: dict | None = None,
+        data: dict | None = None,
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}
@@ -37,8 +37,8 @@ Sync Post By Request
 """
 def postByRequests(
         uri: str,
-        data: dict = None,
-        params: dict = None,
+        data: dict | None = None,
+        params: dict | None = None,
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}
@@ -59,8 +59,8 @@ Sync Get By Session
 """
 def getBySession(
         uri: str,
-        params: dict = None,
-        data: dict = None,
+        params: dict | None = None,
+        data: dict | None = None,
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}
@@ -81,8 +81,8 @@ Sync Post By Session
 """
 def postBySession(
         uri: str,
-        data: dict = None,
-        params: dict = None,
+        data: dict | None = None,
+        params: dict | None = None,
         headers = None
 ) -> Response:
     if headers is None: headers = {"User-Agent": fake_useragent.UserAgent().random}

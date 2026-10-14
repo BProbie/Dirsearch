@@ -1,5 +1,6 @@
-import sys
 import asyncio
+import sys
+
 from src.dirsearch.requests import async_requests
 
 NAME = "Dirsearch"
